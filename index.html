@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <!-------------------------------- 
+    Fonts link -----------------------
+    ---------------------------------->
+
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Manrope:wght@300;400;700&display=swap"
+      rel="stylesheet"
+    />
+
+    <!-------------------------------- 
+    Style link -----------------------
+    ---------------------------------->
+
+    <link rel="stylesheet" href="./style.css" />
+
+    <!-------------------------------- 
+    Script link ----------------------
+    ---------------------------------->
+
+    <script src="./index.js" defer></script>
+
+    <!-------------------------------- 
+    Title link -----------------------
+    ---------------------------------->
+
+    <title>Sayyed Asad Ullah's form Validation.</title>
+
+    <!-------------------------------- 
+    Web-Icon link --------------------
+    ---------------------------------->
+
+    <link rel="shortcut icon" href="./Asad-logo.png" type="image/x-icon" />
+  </head>
+  <body>
+    <!-------------------------------- 
+    Form Section ---------------------
+    ---------------------------------->
+
+    <section class="main-parent">
+      <!-------------------------------- 
+    Main From ------------------------
+    ---------------------------------->
+      <form id="form" class="form">
+        <!-------------------------------- 
+    From Title -----------------------
+    ---------------------------------->
+        <h2 class="h2">Register Your Account</h2>
+        <!-------------------------------- 
+    @userName Section ----------------
+    ---------------------------------->
+        <section class="form-control">
+          <label for="username">User Name</label>
+          <input type="text" id="username" placeholder="Enter username" />
+          <small>Error Message</small>
+        </section>
+        <!-------------------------------- 
+    Email Section --------------------
+    ---------------------------------->
+        <section class="form-control">
+          <label for="email">Email</label>
+          <input type="text" id="email" placeholder="Enter email" />
+          <small>Error Message</small>
+        </section>
+        <!-------------------------------- 
+    Creat Password -------------------
+    ---------------------------------->
+        <section class="form-control">
+          <label for="password">Password</label>
+          <input type="password" id="password" placeholder="Enter password" />
+          <small>Error Message</small>
+        </section>
+        <!-------------------------------- 
+    Confirm Password -----------------
+    ---------------------------------->
+        <section class="form-control">
+          <label for="password2">Confirm Password</label>
+          <input
+            type="password"
+            id="password2"
+            placeholder="Enter Password Again"
+          />
+          <small>Error Message</small>
+        </section>
+
+        <button type="submit">Submit</button>
+      </form>
+    </section>
+  </body>
+</html>

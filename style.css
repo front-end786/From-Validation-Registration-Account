@@ -1,0 +1,242 @@
+/*------------------------------------ 
+Basic Structure ----------------------
+--------------------------------------
+*/
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Manrope", sans-serif;
+}
+
+/*------------------------------------ 
+HTML Font Style ----------------------
+--------------------------------------
+*/
+
+html {
+  font-size: 62.5%;
+}
+
+@media (max-width: 400px) {
+  html {
+    font-size: 55%;
+  }
+}
+
+@media (max-width: 340px) {
+  html {
+    font-size: 50%;
+  }
+}
+
+/*------------------------------------ 
+Root Variables -----------------------
+--------------------------------------
+*/
+
+:root {
+  --sau-white: #ffffff;
+  --sau-gradient: linear-gradient(
+    270deg,
+    #944bdd,
+    #b349d0 11%,
+    #c846c1 22%,
+    #d94ab5 33%,
+    #e44ea6 44%,
+    #ee599c 56%,
+    #f36293 67%,
+    #f66f8a 78%,
+    #f77e88 89%,
+    #f68984
+  );
+  --sau-black: #012;
+  --sau-sucess: #2ecc71;
+  --sau-loss: #e74c3c;
+  --sau-light-gray: #234;
+  --sau-mini-similar: 0.5rem;
+  --sau-basic-shadow: 0 2px 10px rgba(216, 218, 222, 0.3);
+  --sau-gutter-similar: 1rem;
+  --sau-gutter-similar-big: 2rem;
+  --sau-gutter-similar-huge-mini: 3rem;
+  --sau-gutter-similar-huge: 4rem;
+  --sau-gutter-similar-huge-big: 5rem;
+  --sau-midium-gray: #777;
+  --sau-basic-font-size: 1.4rem;
+  --font-color: #fed;
+}
+
+/*------------------------------------ 
+Body Styling -------------------------
+--------------------------------------
+*/
+
+body {
+  color: var(--font-color);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: #123;
+  height: 100vh;
+  overflow-y: hidden;
+}
+
+/*------------------------------------ 
+Main Styling -------------------------
+--------------------------------------
+*/
+
+.main-parent {
+  background-color: var(--sau-black);
+  box-shadow: var(--sau-basic-shadow);
+  border-radius: var(--sau-mini-similar);
+  font-size: 1.5rem;
+  max-width: 45rem;
+}
+
+/*------------------------------------ 
+Form Styling -------------------------
+--------------------------------------
+*/
+
+.form {
+  padding: var(--sau-gutter-similar-huge-mini) var(--sau-gutter-similar-huge);
+}
+
+/*------------------------------------ 
+Head Styling -------------------------
+--------------------------------------
+*/
+
+.form h2 {
+  text-align: center;
+  margin-bottom: var(--sau-gutter-similar-huge);
+  font-weight: 700;
+  font-size: 2.8rem;
+  color: transparent;
+  background: var(--sau-gradient);
+  -webkit-background-clip: text;
+}
+
+/*------------------------------------ 
+Form Control -------------------------
+--------------------------------------
+*/
+
+.form-control {
+  margin-bottom: var(--sau-gutter-similar);
+  margin-bottom: var(--sau-gutter-similar-big);
+  position: relative;
+}
+
+/*------------------------------------ 
+Form Label Styling -------------------
+--------------------------------------
+*/
+
+.form-control label {
+  display: block;
+  margin-bottom: var(--sau-mini-similar);
+  color: inherit;
+  font-weight: 500;
+}
+
+/*------------------------------------ 
+Form Input ---------------------------
+--------------------------------------
+*/
+
+.form-control input {
+  display: block;
+  border: 2px solid #f0f0f0;
+  border-radius: 0 var(--sau-mini-similar);
+  width: 100%;
+  padding: var(--sau-gutter-similar);
+  font-size: var(--sau-basic-font-size);
+  font-weight: 700;
+  border: 3px solid var(--sau-white);
+  border-bottom-right-radius: var(--sau-gutter-similar);
+  border-top-left-radius: var(--sau-gutter-similar);
+  border-top-right-radius: 0;
+  border-bottom-left-radius: 0;
+  position: relative;
+}
+
+/*------------------------------------ 
+form Input Focus ---------------------
+--------------------------------------
+*/
+
+.form-control input:focus {
+  outline: none;
+  border: 3px solid transparent;
+  border-radius: var(--sau-mini-similar);
+  background: linear-gradient(var(--sau-white), var(--sau-white)),
+    var(--sau-gradient);
+  background-clip: padding-box, border-box;
+  background-origin: padding-box, border-box;
+  border-bottom-right-radius: var(--sau-gutter-similar);
+  border-top-left-radius: var(--sau-gutter-similar);
+  border-top-right-radius: 0;
+  border-bottom-left-radius: 0;
+}
+
+/*------------------------------------ 
+Button Styling -----------------------
+--------------------------------------
+*/
+
+button {
+  display: flex;
+  padding: var(--sau-mini-similar) var(--sau-gutter-similar-big);
+  background: none;
+  color: inherit;
+  font-size: 1.6rem;
+  border: 1px solid transparent;
+  border-radius: var(--sau-mini-similar);
+  background: linear-gradient(var(--sau-black), var(--sau-black)),
+    var(--sau-gradient);
+  background-clip: padding-box, border-box;
+  background-origin: padding-box, border-box;
+  transition: all 0.5s;
+  cursor: pointer;
+  margin: auto;
+}
+
+/*------------------------------------ 
+BTN Hover Styling --------------------
+--------------------------------------
+*/
+
+button:hover {
+  box-shadow: rgb(246, 136, 132, 0.14) 0px 0px 0px 7px;
+}
+
+/*------------------------------------ 
+Form Success Input -------------------
+--------------------------------------
+*/
+
+.form-control.success input {
+  border: 3px solid var(--sau-sucess);
+}
+
+/*------------------------------------ 
+Form loss Input -------------------
+--------------------------------------
+*/
+
+.form-control small {
+  color: var(--sau-loss);
+  position: absolute;
+  left: 0;
+  top: 100%;
+  visibility: hidden;
+}
+.form-control.loss input {
+  border: 3px solid var(--sau-loss);
+}
+.form-control.loss small {
+  visibility: visible;
+}
